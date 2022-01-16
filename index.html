@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blogging</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(167, 165, 164);
+          
+            overflow-x: hidden;
+
+
+
+
+        }
+
+        h1 {
+            font-size: 10vmin;
+          
+            margin-left: 40px;
+           
+        }
+
+
+        .started {
+            height: 4vh;
+            background-color: rgb(71, 69, 69);
+            text-align: center;
+            font-size: 3vmin;
+            width: 160px;
+            border-radius: 1px;
+            cursor: pointer;
+            color: rgb(237, 238, 201);
+            padding: 4px;
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 1100px;
+        }
+
+        .started:hover {
+            color: rgb(16, 207, 16);
+        }
+
+        .icon {
+            border: none;
+            width: 190px;
+
+            height: 5vh;
+
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 0.5px;
+        }
+
+        .search {
+            text-align: center;
+            border: none;
+            height: 4.9vh;
+            width: 140px;
+            font-size: 2.5vmin;
+        }
+
+        .img {
+            width: 50px;
+            height: 4.8vh;
+            cursor: pointer;
+            margin-top: 0.2px;
+            float: right;
+        }
+
+        .total-views {
+            border: 00.5px solid;
+            width: 160px;
+            height: 3vh;
+            display: inline-block;
+            text-align: center;
+            background: whitesmoke;
+            color: black;
+            font-weight: bold;
+            border: none;
+            padding: 2px;
+            margin-left: 1125px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .total-users {
+            border: 00.5px solid;
+            width: 160px;
+            height: 3vh;
+            display: inline-block;
+            text-align: center;
+            background: whitesmoke;
+            color: black;
+            font-weight: bold;
+            border: none;
+            padding: 2px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #total-users {
+            margin-left: 0.2px;
+            margin-top: 35px;
+        }
+
+        #input {
+            width: 50px;
+            height: 2vh;
+            background: none;
+            border: none;
+            color: rgb(28, 129, 168);
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+
+        }
+
+        /*Navbar*/
+        .navbar ul {
+            overflow: auto;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            font-size: 2.7vmin;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            margin: 20px;
+
+
+
+
+        }
+
+        .nav {
+            border: none;
+            width: 1460px;
+            height: 6vh;
+            background-color: rgb(75, 73, 73);
+            margin: 50px auto;
+
+
+
+
+        }
+
+        .li {
+            margin-top: 11px;
+
+
+        }
+
+        #a {
+            padding: 5px;
+            text-decoration: none;
+            background-color: rgb(51, 51, 51);
+            color: whitesmoke;
+            margin-left: 270px;
+
+        }
+
+        .a {
+            padding: 5px;
+            text-decoration: none;
+            background-color: rgb(51, 51, 51);
+            color: whitesmoke
+        }
+
+        a:hover {
+            color: rgb(53, 204, 224);
+        }
+
+        #a:hover {
+            color: rgb(53, 204, 224);
+        }
+
+        /*line*/
+        .line {
+            border-radius: 30px;
+            width: 1400px;
+            height: 1vh;
+            background: rgb(228, 224, 224);
+            display: flex;
+            margin: auto;
+
+
+        }
+
+
+         /* Blog Section-1 styling */
+         .section-1 {
+            display: flex;
+            margin: 0 0;
+            background-color: rgb(192, 185, 185);
+            margin-top: 10px;
+            border-radius: 3px;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: left;
+            padding: 5px;
+            padding-top: 20px;
+            height: 411px;
+        }
+
+        .section-1 .blog-1 {
+            text-align: left;
+            padding: 0px;
+            flex: 25%;
+            margin-left: 10px;
+        }
+
+        .section-1 .blog-1 img {
+            width: 400px;
+            height: 150px;
+        }
+
+        .section-1 .blog-1 h2 {
+            font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif !important;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+
+        .section-1 .blog-1 h3 {
+            font-family: Georgia, Times, Times New Roman, serif;
+            font-weight: normal;
+            color: rgb(93, 93, 93);
+            cursor: pointer;
+            padding-top: 10px;
+        }
+
+        .section-1 .blog-1 p {
+            padding-top: 10px;
+        }
+
+        .section-1 .blog-1 h4 {
+            font-weight: bold;
+            padding-top: 10px;
+        }
+
+        .section-1 .blog-2 {
+            display: flex;
+            flex-direction: column;
+            flex: 50%;
+            justify-content: space-around;
+        }
+
+        .section-1 .blog-2 img {
+            border: 1px solid black;
+        }
+
+        .section-1 .blog-2 .blog-content {
+            display: flex;
+        }
+
+        .section-1 .blog-2 .blog-content .text p {
+            color: rgb(93, 93, 93);
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .section-1 .blog-2 h3 {
+            font-family: Georgia, Times, Times New Roman, serif;
+            font-weight: normal;
+            color: rgb(93, 93, 93);
+            cursor: pointer;
+
+        }
+
+        .section-1 .blog-3 {
+            flex: 25%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-1 .blog-3 img {
+            width: 400px;
+            height: 150px;
+        }
+
+        .section-1 .blog-3 h2 {
+            font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif !important;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+
+        .section-1 .blog-3 h3 {
+            font-family: Georgia, Times, Times New Roman, serif;
+            font-weight: normal;
+            color: rgb(93, 93, 93);
+            cursor: pointer;
+            padding-top: 10px;
+        }
+
+        .section-1 .blog-3 p {
+            padding-top: 10px;
+
+        }
+
+        .section-1 .blog-3 p a {
+            color: black;
+        }
+
+        .section-1 .blog-3 p a:hover {
+            color: aquamarine;
+        }
+
+        .section-1 .blog-3 h4 {
+            font-weight: bold;
+            padding-top: 10px;
+        }
+
+        /* End Blog Section-1 styling */
+
+        /* Blog image styling */
+        .blog-image img {
+            margin-top: 10px;
+            margin-left: 1px;
+            margin-right: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* Blog Section-2 styling */
+        .section-2 {
+            display: flex;
+            margin: 0 0;
+            background-color: rgb(192, 185, 185);
+            margin-top: 10px;
+            border-radius: 3px;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: left;
+            padding: 5px;
+            padding-top: 20px;
+            height: 411px;
+        }
+
+        .section-2 .blog-1 {
+            text-align: left;
+            padding: 0px;
+            flex: 25%;
+        }
+
+        .section-2 .blog-1 img {
+            width: 400px;
+            height: 150px;
+        }
+
+        .section-2 .blog-1 h2 {
+            font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif !important;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+
+        .section-2 .blog-1 h3 {
+            font-family: Georgia, Times, Times New Roman, serif;
+            font-weight: normal;
+            color: rgb(93, 93, 93);
+            cursor: pointer;
+            padding-top: 10px;
+        }
+
+        .section-2 .blog-1 p {
+            padding-top: 10px;
+        }
+
+        .section-2 .blog-1 h4 {
+            font-weight: bold;
+            padding-top: 10px;
+        }
+
+        .section-2 .blog-2 {
+            display: flex;
+            flex-direction: column;
+            flex: 50%;
+            justify-content: space-around;
+        }
+
+        .section-2 .blog-2 img {
+            border: 1px solid black;
+        }
+
+        .section-2 .blog-2 .blog-content {
+            display: flex;
+        }
+
+        .section-2 .blog-2 .blog-content .text p {
+            cursor: pointer;
+            color: rgb(93, 93, 93);
+            margin: 0 10px;
+        }
+
+        .section-2 .blog-2 h3 {
+            font-family: Georgia, Times, Times New Roman, serif;
+            font-weight: normal;
+            color: rgb(93, 93, 93);
+            cursor: pointer;
+
+        }
+
+        .section-2 .blog-3 {
+            flex: 25%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-2 .blog-3 img {
+            width: 400px;
+            height: 150px;
+        }
+
+        .section-2 .blog-3 h2 {
+            font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif !important;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+
+        .section-2 .blog-3 h3 {
+            font-family: Georgia, Times, Times New Roman, serif;
+            font-weight: normal;
+            color: rgb(93, 93, 93);
+            cursor: pointer;
+            padding-top: 10px;
+        }
+
+        .section-2 .blog-3 p {
+            padding-top: 10px;
+        }
+
+        .section-2 .blog-3 p a {
+            color: black;
+        }
+
+        .section-2 .blog-3 p a:hover {
+            color: aquamarine;
+        }
+
+        .section-2 .blog-3 h4 {
+            font-weight: bold;
+            padding-top: 10px;
+        }
+
+        /* End Blog Section-2 styling */
+
+        /* Section-3 styling */
+
+        .section-3 {
+            background-color: rgb(68, 67, 67);
+            padding: 0px;
+            text-align: center;
+            border-radius: 3px;
+            margin-top: 10px;
+            padding-bottom: 1px;
+        }
+
+        .section-3 .footer {
+            padding: 15px;
+            padding-left: 33px;
+            margin-top: 6px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: blanchedalmond;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-top: 1px;
+            padding: 9px;
+        }
+
+        .footer a:hover {
+            color: aquamarine;
+        }
+
+        .section-3 .text {
+            color: blanchedalmond;
+            cursor: pointer;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* .social-icons a:hover::after{
+    content: '';
+    position: absolute;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 50%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 16px;
+} */
+        .social-icons a:hover {
+            opacity: .7;
+        }
+
+        .social-icons .fa-facebook {
+            background: #3B5998;
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            cursor: pointer;
+
+        }
+
+        .social-icons .fa-twitter {
+            background: #55ACEE;
+            color: white;
+            border-radius: 50%;
+            width: 15px;
+            cursor: pointer;
+
+        }
+
+        .social-icons .fa-google {
+            background: rgb(187, 43, 43);
+            color: white;
+            border-radius: 50%;
+            width: 15px;
+            cursor: pointer;
+
+        }
+
+        .social-icons .fa-rss {
+            background: orange;
+            color: white;
+            border-radius: 50%;
+            width: 15px;
+            cursor: pointer;
+
+        }
+
+        .social-icons .fa-youtube {
+            background: red;
+            color: white;
+            border-radius: 50%;
+            width: 15px;
+            cursor: pointer;
+
+        }
+
+        .social-icons a:hover {
+            color: aquamarine;
+        }
+
+        .copyright .container {
+            margin-top: 10px;
+            color: blanchedalmond;
+            cursor: pointer;
+        }
+
+        .copyright .container a {
+            text-decoration: none;
+            color: blanchedalmond;
+            padding: 10px;
+
+        }
+
+        .copyright .container a:hover {
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div class="started" onclick="window.open('join.html')">Get started</div>
+    &nbsp;&nbsp;&nbsp;
+
+
+    <div class="icon">
+        <input type="text" placeholder="Google Search" class="search">
+
+        <img src="img/icon1.png" alt="error" class="img">
+
+    </div>
+  
+    <div class="total-views">
+        <div class="head">Total Views: 00
+
+        </div>
+    </div>
+
+    <div class="total-users">
+        <div class="head">Total Users: 00
+        </div>
+
+    </div>
+    <h1>Blogging</h1>
+    
+    <!--Navbar-->
+    <div class="nav">
+        <nav>
+            <ul>
+                <li class="li"> <a href="#" id="a" class="a">Home</a>
+                </li>
+                <li class="li"> <a href="#" class="a">Nation</a>
+                </li>
+                <li class="li"> <a href="#" class="a">Sports</a>
+                </li>
+                <li class="li"> <a href="#" class="a">Politics</a>
+                </li>
+                <li class="li"> <a href="#" class="a">Entertainment</a>
+                </li>
+                <li class="li"> <a href="#" class="a">Search</a>
+                </li>
+                <li class="li"> <a href="#" class="a">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="line"></div>
+
+    </div>
+
+
+      <!-- Blog Section-1 -->
+      <div class="section-1">
+        <div class="blog-1">
+            <img src="img/twitter_blog_image.png" alt="Image Loading">
+            <h2>Should Twitter Get Rid of Follower Counts?</h2>
+            <h3>The possibility feels closer than ever</h3>
+            <p>Cool Neha in all Things Creative</p>
+            <h4>Jan 9 . 5 min read</h4>
+        </div>
+        <div class="blog-2">
+            <div class="blog-content">
+                <div class="image">
+                    <a href="#">
+                        <img src="img/human_face.png" alt="belahotellforside">
+                    </a>
+                </div>
+                <div class="text">
+                    <p>Html, a standardized system for tagging text files to achieve font, colour, graphic, and
+                        hyperlink effects on WWW pages.</p>
+
+                </div>
+
+            </div>
+
+            <div class="blog-content">
+                <div class="image">
+                    <a href="#">
+                        <img src="img/road_truck.png" alt="belahotellforside">
+                    </a>
+                </div>
+                <div class="text">
+                    <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media & control
+                        the layout of multiple web pages.</p>
+                </div>
+            </div>
+            <div class="blog-content">
+                <div class="image">
+                    <a href="#">
+                        <img src="img/nfl.png" alt="belahotellforside">
+                    </a>
+                </div>
+                <div class="text">
+                    <p>Teach yourself the foundations of designing using these links made for learning.--freecodecamp &
+                        theodinproject</p>
+                </div>
+            </div>
+        </div>
+        <div class="blog-3">
+            <img src="img/waffle_patio.png" alt="Image Loading">
+            <h2>No, That’s Not How You Say It</h2>
+            <h3>A short personal history of my favorite fast food</h3>
+            <p><a href="index.html">(Read more... )</a></p>
+            <p> VIP Singh </p>
+            <h4>Jan 29 · 8 min read</h4>
+        </div>
+    </div>
+
+    <!-- End Blog Section-1 -->
+    <hr>
+
+    <div class="blog-image">
+        <img src="img/welcome_image.png" alt="Loading Image">
+    </div>
+
+
+
+    <hr>
+
+    <!-- Blog Section-2 -->
+    <div class="section-2">
+        <div class="blog-1">
+            <img src="img/programming_image.png" alt="Image Loading">
+            <h2>A few good reasons why you should learn to code</h2>
+            <h3>You might be wondering if learning to code is something you should...</h3>
+            <p>Rocky Jagtiani </p>
+            <h4>Jan 9 · 5 min read</h4>
+        </div>
+        <div class="blog-2">
+            <div class="blog-content">
+                <div class="image">
+                    <a href="#">
+                        <img src="img/investing.png" alt="belahotellforside">
+                    </a>
+                </div>
+                <div class="text">
+                    <p>Only buy something that you’d be perfectly happy to hold if the market shut down for 10 years.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="blog-content">
+                <div class="image">
+                    <a href="#">
+                        <img src="img/summer.png" alt="belahotellforside">
+                    </a>
+                </div>
+                <div class="text">
+                    <p>When I figured out how to work my grill, it was quite a moment. I discovered that summer is a
+                        completely different experience when you know how to grill.</p>
+                </div>
+            </div>
+            <div class="blog-content">
+                <div class="image">
+                    <a href="#">
+                        <img src="img/yellow_design.png" alt="belahotellforside">
+                    </a>
+                </div>
+                <div class="text">
+                    <p> Chains of habit are too light to be felt until they are too heavy to be broken.</p>
+                </div>
+            </div>
+        </div>
+        <div class="blog-3">
+            <img src="img/beach.png" alt="Image Loading">
+            <h2>Deep space radio waves baffle astronomers; aliens not ruled out</h2>
+            <h3> Every time we see something we’ve never seen before that is an opportu..</h3>
+            <p> Enzyme Snehar </p>
+            <h4>Jan 29 · 8 min read</h4>
+        </div>
+    </div>
+    <!-- End Blog Section-2 -->
+
+    <hr>
+
+    <!--  Section-3 -->
+    <div class="section-3">
+        <div class="footer">
+            <span class>
+                <a href="">About Us</a>
+            </span>
+            <span class>
+                <a href="">Privacy policy</a>
+            </span>
+            <span class>
+                <a href="">Newsletter</a>
+            </span>
+            <span class>
+                <a href="">Sitemap</a>
+            </span>
+        </div>
+        <h5 class="text">
+            <b>FOLLOW US ON</b>
+        </h5>
+        <div class="social-icons">
+            <a class="fa fa-facebook" href="https://www.facebook.com/suvenconsultants/"></a>
+            <a class="fa fa-twitter" href=""></a>
+            <a class="fa fa-google"
+                href="https://www.google.co.in/search?nfpr=1&q=suven+consultants&spell=1&sa=X&ved=0ahUKEwidoubh1dXdAhWFNY8KHfrxBZoQBQgpKAA&biw=1366&bih=657#lrd=0x3be7c8afbfffffff:0xcf0cd79d3c52220a,1,,,"></a>
+            <a class="fa fa-rss" href=""></a>
+            <a class="fa fa-youtube" href="https://www.youtube.com/user/rockyjagtiani"></a>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <h5>
+                    <p>
+                        Copyright © 2019 <a href="">Suven Consultants and technology pvt ltd</a> All rights reserved
+                    </p>
+                </h5>
+            </div>
+        </div>
+    </div>
+    <!--  Section-3 -->
+
+
+
+
+
+
+
+
+    <script>
+        function updateCounter() {
+            fetch('')
+                .then(res => res.json())
+                .then(data => counterElement.innerHTML = data.value)
+        }
+
+        updateCounter()
+
+        counterElement = document.getElementsByClassName('count')[0];
+    </script>
+
+</body>
+
+</html>
